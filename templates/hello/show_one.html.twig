@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div></div>
-<h3>Currently message:</h3>
-<b>{{messages.message}}</b>
-{{include('hello/_message.html.twig',{message: messages})}}
+<div>
+    <h3>Currently message:</h3>
+        <b>{{messages.message}}</b>
+    {{include('hello/_message.html.twig',{message: messages})}}
 </div>
 {% endblock %}
