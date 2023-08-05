@@ -20,7 +20,8 @@
             user@email.com
         </a>
     </div>
-    <div>
-        <a href="{{ path('app_micro_post_edit', {post: post.id}) }}">Edit</a>
+    <div class="flex">
+        <a href="{{ path('app_micro_post_edit', {post: post.id}) }}" class="mr-2">Edit</a>
+        <a href="{{ path('app_micro_post_comment', {post: post.id}) }}">Comment <span class="px-2 bg-gray-200 rounded-md dark:bg-gray-700">{{post.comments.count}}</span></a> 
     </div>
 </div>
