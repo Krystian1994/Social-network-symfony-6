@@ -31,8 +31,8 @@ class MicroPost
     #[Assert\Length(min: 5, max: 500)]
     private ?string $text = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $created = null;
+    #[ORM\Column(type: 'datetime')]
+    private $created;
 
     #[ORM\OneToMany(mappedBy: 'post', targetEntity: Comment::class, orphanRemoval: true)]
     private Collection $comments;
