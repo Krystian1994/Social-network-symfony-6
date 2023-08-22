@@ -29,8 +29,11 @@ class Comment
     #[ORM\JoinColumn(nullable: false)]
     private ?User $author = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $created = null;
+    // #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    // private ?\DateTimeInterface $created = null;
+
+    #[ORM\Column(type: 'datetime')]
+    private $created;
 
     public function __contruct(){
         $this->created = new DateTime();
